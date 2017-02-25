@@ -1,0 +1,10 @@
+<h1>Recipe Box</h1>
+
+<div class="flex">
+    <% @meals.each do |meal| %>
+    <div class="recipe">
+      <%= link_to meal.name, meal_path(meal) %>
+      <div class="preview" style="background-image: url(<%= meal.photo_url %>)"></div>
+    </div>
+    <% end %>
+</div>
