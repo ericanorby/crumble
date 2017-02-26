@@ -10,7 +10,14 @@
 
   <body>
     <header>
+
     </header>
+    <nav>
+      <%= link_to "Your Recipe Box", meals_path %>
+      <%= link_to "Browse Recipes" %>
+    </nav>
+    <main>
     <%= yield %>
+  </main>
   </body>
 </html>

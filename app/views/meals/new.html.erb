@@ -1,0 +1,23 @@
+<h1>Add a Recipe</h1>
+
+<%= form_for @meal do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url %>
+  <br>
+  <%= f.label :servings %>
+  <%= f.text_field :servings %>
+  <br>
+  <%= f.label :total_cost %>
+  <%= f.text_field :total_cost %>
+  <br>
+  <%= f.label :difficulty %>
+  <%= f.text_field :difficulty %>
+  <br>
+  <%= f.label :directions %>
+  <%= f.text_area :directions %>
+  <br>
+  <%= f.submit %>
+<% end %>

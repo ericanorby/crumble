@@ -1,5 +1,20 @@
 <h1><%= @meal.name %></h1>
 
+<div class="flex">
+  <div class="show" style="background-image: url(<%= @meal.photo_url %>)"></div>
+
+<ul>
+<% @ingredients.each do |ingredient| %>
+  <li>
+    <%= ingredient.name %>
+    <%= ingredient.amount %>
+    <%= ingredient.measurement %>
+  </li>
+<% end %>
+</ul>
+<%= link_to "+ Add Ingredient", new_meal_ingredient_path(@meal) %>
+</div>
+
 <p>Servings: <%= @meal.servings %></p>
 <p>Total Cost: <%= @meal.total_cost %></p>
 <p>Difficulty: <%= @meal.difficulty %></p>
