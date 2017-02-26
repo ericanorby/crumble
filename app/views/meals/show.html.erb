@@ -1,5 +1,9 @@
 <h1><%= @meal.name %></h1>
 
+<span>Servings: <%= @meal.servings %></span>
+<span>Total Cost: $<%= @meal.total_cost %></span>
+<span>Difficulty: <%= @meal.difficulty %></span>
+
 <div class="flex">
   <div class="show" style="background-image: url(<%= @meal.photo_url %>)"></div>
 
@@ -11,11 +15,10 @@
     <%= ingredient.measurement %>
   </li>
 <% end %>
-</ul>
 <%= link_to "+ Add Ingredient", new_meal_ingredient_path(@meal) %>
+</ul>
+
 </div>
 
-<p>Servings: <%= @meal.servings %></p>
-<p>Total Cost: <%= @meal.total_cost %></p>
-<p>Difficulty: <%= @meal.difficulty %></p>
+
 <p>Directions: <%= @meal.directions %></p>

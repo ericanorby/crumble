@@ -16,7 +16,10 @@
       <%= link_to "Your Recipe Box", meals_path %>
       <%= link_to "Browse Recipes" %>
     </nav>
+
     <main>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     <%= yield %>
   </main>
   </body>
