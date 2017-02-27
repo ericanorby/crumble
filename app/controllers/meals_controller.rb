@@ -40,6 +40,16 @@ class MealsController < ApplicationController
     redirect_to meals_path
   end
 
+  def add
+    @meal = Meal.find(params[:id])
+    current_user.favorites.create(meal: @meal)
+    redirect_to '/recipe_box'
+  end
+
+  def remove
+
+  end
+
   private
 
   def meal_params

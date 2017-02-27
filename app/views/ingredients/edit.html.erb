@@ -1,1 +1,17 @@
 <h1>Edit Ingredient</h1>
+
+<%= form_for [@meal,@ingredient] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :amount %>
+  <%= f.text_field :amount %>
+  <br>
+  <%= f.label :measurement %>
+  <%= f.text_field :measurement %>
+  <br>
+  <%= f.label :calories %>
+  <%= f.text_field :calories %>
+  <br>
+  <%= f.submit %>
+<% end %>

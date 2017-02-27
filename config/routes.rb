@@ -4,7 +4,13 @@ Rails.application.routes.draw do
   root "meals#index"
 
   resources :meals do
+    member do
+      post 'add'
+      delete 'remove'
+    end
     resources :ingredients
   end
+
+  get '/recipe_box', to: 'mealboxs#index'
 
 end

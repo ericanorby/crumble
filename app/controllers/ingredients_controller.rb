@@ -18,7 +18,14 @@ class IngredientsController < ApplicationController
 
   def edit
     @meal = Meal.find(params[:meal_id])
-    @ingredients = @meal.ingredients.find(params[:id])
+    @ingredient = @meal.ingredients.find(params[:id])
+  end
+
+  def update
+    @meal = Meal.find(params[:meal_id])
+    @ingredient = @meal.ingredients.find(params[:id])
+    @ingredient.update(ingredient_params)
+    redirect_to meal_ingredient_path(@meal,@ingredient)
   end
 
   def destroy

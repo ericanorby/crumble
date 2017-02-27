@@ -1,5 +1,7 @@
 <h1><%= @meal.name %></h1>
 
+<%= link_to "Add to mealbox", add_meal_path(@meal), method: :post %>
+
 <span>Servings: <%= @meal.servings %></span>
 <span>Total Cost: <%= number_to_currency(@meal.total_cost, options = {precision: 2}) %></span>
 <span>Cost per serving: <%= number_to_currency(@meal.cost_per_serving, options = {precision: 2}) %></span>
@@ -15,7 +17,6 @@
     <% @ingredients.each do |ingredient| %>
     <li>
       <%= link_to ingredient.name, meal_ingredient_path(@meal, ingredient)%>
-      <!-- <%= link_to "Edit", edit_meal_ingredient_path(@meal,ingredient)%> -->
       <!-- <%= ingredient.amount %>
       <%= ingredient.measurement %> -->
     </li>
