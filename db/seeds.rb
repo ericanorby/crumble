@@ -28,6 +28,18 @@ pb_bars = Meal.create(name: "Peanut Butter Trail Mix Bars", photo_url: "http://s
 In a food processor (or blender), pulverize the almonds and cashews for about 10 seconds into small pieces, leaving some large chunks in tact. In a large bowl, combine the oats, ground flax, crushed nuts, chocolate chips, dried cranberries, and raisins. Mix thoroughly. Set aside.
 Mix together melted peanut butter and honey in a small bowl and pour over the dry ingredients. Mix until each bit is fully coated. Scoop the mixture into prepared baking dish and press firmly until the tops are completely even. You'll want to pack it down nice and tight.
 Place bars into the refrigerator to set up for at least one hour. Cut into 16 squares. Bars can be stored at room temperature for up to 1 week, in the refrigerator for up to 2 weeks, or in the freezer for up to 3 months. Thaw overnight in the refrigerator.")
+chickpea = Meal.create(name: "Curried Cauliflower Chickpea Wraps", photo_url: "http://themuffinmyth.com/wp-content/uploads/2015/03/curried_cauliflower_wraps_3.jpg", servings: 6, total_cost: 30, difficulty: "hard", directions: "	1. Start with breaking down the cauliflower into large chunks.
+	2. Place cauliflower chunks into a pot, cover with water, add a pinch of salt, and bring to the boil over high heat. Reduce to a simmer, cover, and simmer until cauliflower is tender (but not mushy!) about 15-20 minutes.
+	3. Drain the cauliflower, and using a potato masher, mash it roughly. There should still be some chunks, but mostly mashed. Set this aside to cool a bit.
+	4. While the cauliflower is boiling, set a large pot over medium-high heat. This is the pot in which you'll mix everything together in the end, so make sure it's large enough!
+	5. Add the olive oil to the pot to heat, then add the onions and sauté for 5-7 minutes, until they're just beginning to brown.
+	6. Add the ginger and sauté for a minute more.
+	7. Reduce the heat to medium, and then add the salt, garam masala, and cayenne, and sauté for one minute.
+	8. Add the mashed cauliflower, chickpeas, and cilantro and stir well, cooking for 3-5 minutes more.
+	9. Remove from heat, and let cool slightly.
+	10. To make the garlic yoghurt sauce (if using) whisk together plain yoghurt, crushed garlic, and add salt and pepper to taste.
+	11. Spoon about ⅙th of the filling into the center of each tortilla. Fold one side over towards the center, fold the edges in, and roll up like a burrito.
+Serve with garlic yoghurt sauce if desired.")
 
 Ingredient.create(name: "Cauliflower", amount: 2, measurement: "head", calories: 30, meal: shephards_pie)
 Ingredient.create(name: "Olive oil", amount: 2, measurement: "tbsp", calories: 200, meal: shephards_pie)
@@ -55,3 +67,15 @@ Ingredient.create(name: "Dried cranberries", amount: 0.33, measurement: "cup", c
 Ingredient.create(name: "Raisins", amount: 0.33, measurement: "cup", calories: 50, meal: pb_bars)
 Ingredient.create(name: "Honey", amount: 0.5, measurement: "cup", calories: 300, meal: pb_bars)
 Ingredient.create(name: "Peanut butter", amount: 1, measurement: "cup", calories: 600, meal: pb_bars)
+
+Ingredient.create(name: "Cauliflower", amount: 1, measurement: "head", calories: 100, meal: chickpea)
+Ingredient.create(name: "Olive oil", amount: 3, measurement: "tbsp", calories: 300, meal: chickpea)
+Ingredient.create(name: "Yellow onion", amount: 1, measurement: "medium", calories: 80, meal: chickpea)
+Ingredient.create(name: "Ginger", amount: 1, measurement: "tbsp", calories: 30, meal: chickpea)
+Ingredient.create(name: "Garam masala", amount: 1, measurement: "tbsp", calories: 40, meal: chickpea)
+Ingredient.create(name: "Cayenne pepper", amount: 1, measurement: "tsp", calories: 10, meal: chickpea)
+Ingredient.create(name: "Chickpeas", amount: 2, measurement: "cans", calories: 150, meal: chickpea)
+Ingredient.create(name: "Cilantro", amount: 0.5, measurement: "cup", calories: 10, meal: chickpea)
+Ingredient.create(name: "Wheat tortilla", amount: 6, measurement: "large", calories: 600, meal: chickpea)
+Ingredient.create(name: "Plain greek yogurt", amount: 1, measurement: "cup", calories: 300, meal: chickpea)
+Ingredient.create(name: "Garlic", amount: 1, measurement: "clove", calories: 60, meal: chickpea)

@@ -1,0 +1,11 @@
+&#8656; <%= link_to "Back to #{@meal.name}", meal_path(@meal) %>
+
+<h3><%= @ingredient.name %></h3>
+<p>Amount: <%= @ingredient.amount %></p>
+<p>Measurement: <%= @ingredient.measurement %></p>
+<p>Calories: <%= @ingredient.calories %></p>
+
+<p>
+<%= link_to "Edit", edit_meal_ingredient_path(@meal,@ingredient) %> |
+<%= link_to "Delete", meal_ingredient_path(@meal,@ingredient), method: :delete %>
+</p>

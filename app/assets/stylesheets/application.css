@@ -17,35 +17,63 @@
 body {
   margin: 0 auto;
   line-height: 1.4;
+  font-size: 18px;
+  font-family: 'Carrois Gothic', sans-serif;
 }
 
 header {
-  height: 60px;
-  background: silver;
+  height: 80px;
+  background: rgba(90, 75, 170, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: white;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+header a {
+    color: white;
+}
+
+header * {
+  padding: 10px;
+}
+
+header img {
+  height: 100px;
 }
 
 nav {
   padding: 10px;
-  border-bottom: 2px solid black;
+  background: lightgray;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
 }
 
 nav a {
   padding: 10px;
-  color: purple;
+  color: black;
 }
 
-nav a:hover {
-  color: black;
+a:hover {
+  color: rgb(118, 111, 246);
 }
 
 a {
   text-decoration: none;
+  color: rgb(80, 47, 245);
 }
 
 main {
   padding: 20px;
   width: 80%;
   margin: 0 auto;
+}
+
+form {
+  text-align: right;
+  width: 350px;
 }
 
 textarea {
@@ -59,7 +87,28 @@ input[type="text"] {
 }
 
 span {
-  padding: 10px;
+  padding-right: 10px;
+}
+
+.ingredients h3 {
+  padding-left: 40px;
+}
+
+.add-ingredient {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 16px;
+}
+
+ul {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+li {
+  margin: 0 20px;
 }
 
 .preview {
@@ -67,7 +116,8 @@ span {
   height: 200px;
   background-size: cover;
   background-position: center;
-  margin: 10px;
+  margin-top: 10px;
+  border: 1px solid black;
 }
 
 .show {
@@ -75,12 +125,22 @@ span {
   height: 300px;
   background-size: cover;
   background-position: center;
-  border: 2px solid black;
-  margin: 10px 0;
+  border: 1px solid black;
+  margin: 20px 0;
+}
+
+.inline * {
+  display: inline;
 }
 
 .recipe-img {
   height: 400px;
+}
+
+.flex-end {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .flex {
@@ -91,5 +151,5 @@ span {
 .recipe {
   text-align: center;
   width: 200px;
-  margin: 10px;
+  margin: 20px;
 }

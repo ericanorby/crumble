@@ -1,24 +1,35 @@
 <h1><%= @meal.name %></h1>
 
 <span>Servings: <%= @meal.servings %></span>
-<span>Total Cost: $<%= @meal.total_cost %></span>
+<span>Total Cost: <%= number_to_currency(@meal.total_cost, options = {precision: 2}) %></span>
+<span>Cost per serving: <%= number_to_currency(@meal.cost_per_serving, options = {precision: 2}) %></span>
 <span>Difficulty: <%= @meal.difficulty %></span>
+<span>Calories per serving: <%= @meal.cal_per_serving %></span>
 
 <div class="flex">
   <div class="show" style="background-image: url(<%= @meal.photo_url %>)"></div>
 
-<ul>
-<% @ingredients.each do |ingredient| %>
-  <li>
-    <%= ingredient.name %>
-    <%= ingredient.amount %>
-    <%= ingredient.measurement %>
-  </li>
-<% end %>
-<%= link_to "+ Add Ingredient", new_meal_ingredient_path(@meal) %>
-</ul>
+<div class="ingredients">
+    <h3>Ingredients</h3>
+  <ul>
+    <% @ingredients.each do |ingredient| %>
+    <li>
+      <%= link_to ingredient.name, meal_ingredient_path(@meal, ingredient)%>
+      <!-- <%= link_to "Edit", edit_meal_ingredient_path(@meal,ingredient)%> -->
+      <!-- <%= ingredient.amount %>
+      <%= ingredient.measurement %> -->
+    </li>
+    <% end %>
+    <%= link_to "+ Add Ingredient", new_meal_ingredient_path(@meal), class: "add-ingredient" %>
+  </ul>
+</div>
 
 </div>
 
+<h3>Directions</h3>
+<p><%= @meal.directions %></p>
 
-<p>Directions: <%= @meal.directions %></p>
+<p style="text-align:right;">
+<%= link_to "Edit", edit_meal_path(@meal) %> |
+<%= link_to "Delete", meal_path(@meal), method: :delete %>
+</p>

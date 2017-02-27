@@ -6,7 +6,13 @@ class MealsController < ApplicationController
 
   def show
     @meal = Meal.find(params[:id])
+    @meal.cost_per_serving = @meal.total_cost / @meal.servings
     @ingredients = @meal.ingredients.all
+    total_calories = []
+    @ingredients.each do |ingredient|
+      total_calories << ingredient.calories
+    end
+    @meal.cal_per_serving = total_calories.sum / @meal.servings
   end
 
   def new
@@ -16,6 +22,22 @@ class MealsController < ApplicationController
   def create
     @meal = Meal.create(meal_params)
     redirect_to meal_path(@meal)
+  end
+
+  def edit
+    @meal = Meal.find(params[:id])
+  end
+
+  def update
+    @meal = Meal.find(params[:id])
+    @meal.update(meal_params)
+    redirect_to meal_path(@meal)
+  end
+
+  def destroy
+    @meal = Meal.find(params[:id])
+    @meal.destroy
+    redirect_to meals_path
   end
 
   private
