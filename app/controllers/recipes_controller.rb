@@ -45,7 +45,8 @@ class RecipesController < ApplicationController
   def add
     @recipe = Recipe.find(params[:id])
     current_user.favorites.create(recipe: @recipe)
-    redirect_to '/recipe_box'
+    flash[:notice] = "Added to your meal box!"
+    redirect_to recipe_path(@recipe)
   end
 
   def remove

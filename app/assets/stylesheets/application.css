@@ -14,11 +14,14 @@
  *= require_self
  */
 
+* {
+  font-family: 'Carrois Gothic', sans-serif;
+}
+
 body {
   margin: 0 auto;
   line-height: 1.4;
   font-size: 18px;
-  font-family: 'Carrois Gothic', sans-serif;
   background: rgb(253, 253, 253);
 }
 
@@ -30,7 +33,6 @@ header {
   align-items: center;
   padding: 0 10px;
   color: white;
-  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 header a {
@@ -39,6 +41,7 @@ header a {
 
 header * {
   padding: 10px;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 header img {
@@ -64,7 +67,7 @@ nav {
 
 nav a {
   padding: 10px;
-  color: black;
+  font-weight: bold;
 }
 
 a:hover {
@@ -84,34 +87,62 @@ main {
 
 textarea {
   resize: none;
-  width: 300px;
-  height: 200px;
-}
-
-input[type="text"] {
-  width: 200px;
-  font-size: 16px;
-  margin: 5px;
-}
-
-input[type="password"],
-input[type="email"] {
-  width: 200px;
-  font-size: 16px;
+  font-size: 18px;
+  padding: 8px;
+  width: 500px;
+  height: 100%;
+  border: 1px solid rgb(139, 128, 195);
   margin: 5px 0;
 }
 
-input[type="submit"] {
-  font-size: 16px;
-  margin: 10px 0;
+input[type=text],
+input[type=password],
+input[type=email] {
+  width: 250px;
+  font-size: 18px;
+  padding: 8px;
+  border: 1px solid rgb(139, 128, 195);
+  margin: 5px 0 10px 0;
 }
 
-span {
+input[type=number] {
+  width: 100px;
+  font-size: 18px;
+  padding: 8px;
+  border: 1px solid rgb(139, 128, 195);
+  margin: 5px 0px 10px 0;
+}
+
+/*input[type=password],
+input[type=email] {
+  width: 200px;
+  font-size: 18px;
+  border: 1px solid rgb(139, 128, 195);
+  margin: 5px 0 10px 0;
+}*/
+
+input[type=submit] {
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: lightgray;
+}
+
+.button {
+  width: 200px;
+}
+
+.properties {
   padding: 10px;
   border: 1px solid rgb(249, 244, 160);
   border-radius: 5px;
   margin: 5px;
   background: rgb(251, 249, 217);
+}
+
+.email {
+  font-size: 16px;
+  color: rgb(249, 244, 160);
 }
 
 .ingredients h3 {
@@ -171,6 +202,10 @@ li {
   flex-wrap: wrap;
 }
 
+.flex-no-wrap {
+  display: flex;
+}
+
 .recipe {
   text-align: center;
   width: 200px;
@@ -182,4 +217,12 @@ li {
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.add-recipe {
+  display: flex;
+}
+
+.add-recipe > div {
+  margin-right: 30px;
 }

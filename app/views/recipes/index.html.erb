@@ -1,5 +1,5 @@
 <div class="inline">
-  <h1>All Recipes</h1>
+  <h1>Browse Recipes</h1>
   <%= link_to "+ Add New", new_recipe_path, style: "float:right" %>
 </div>
 
@@ -9,7 +9,7 @@
     <% @recipes.each do |recipe| %>
     <div class="recipe">
       <%= link_to recipe.name, recipe_path(recipe) %>
-      <div class="preview" style="background-image: url(<%= recipe.photo_url %>)"></div>
+      <a href="recipes/<%= recipe.id %>"><div class="preview" style="background-image: url(<%= recipe.photo_url %>)"></div></a>
     </div>
     <% end %>
 </div>

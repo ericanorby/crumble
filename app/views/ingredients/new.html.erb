@@ -1,16 +1,16 @@
 <h1>Add New Ingredient</h1>
 
 <%= form_for [@recipe,@ingredient] do |f| %>
-  <%= f.label :name %>
+  <%= f.label :name %><br>
   <%= f.text_field :name %>
-  <br>
-  <%= f.label :amount %>
+  <br><br>
+  <%= f.label :amount %><br>
   <%= f.number_field :amount %>
   <br>
-  <%= f.label :measurement %>
+  <%= f.label :measurement %><br>
   <%= f.text_field :measurement %>
   <br>
-  <%= f.label :calories %>
+  <%= f.label :calories %><br>
   <%= f.number_field :calories %>
   <br>
   <%= f.submit %>

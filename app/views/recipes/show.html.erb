@@ -10,11 +10,11 @@
 <p>Uploaded by <%= @recipe.author %></p>
 
 <div class="flex">
-  <span>Servings: <%= @recipe.servings %></span>
-  <span>Total Cost: <%= number_to_currency(@recipe.total_cost, options = {precision: 2}) %></span>
-  <span>Cost per serving: <%= number_to_currency(@recipe.cost_per_serving, options = {precision: 2}) %></span>
-  <span>Calories per serving: <%= @recipe.cal_per_serving %></span>
-  <span>Difficulty: <%= @recipe.difficulty %></span>
+  <span class="properties">Servings: <%= @recipe.servings %></span>
+  <span class="properties">Total Cost: <%= number_to_currency(@recipe.total_cost, options = {precision: 2}) %></span>
+  <span class="properties">Cost per serving: <%= number_to_currency(@recipe.cost_per_serving, options = {precision: 2}) %></span>
+  <span class="properties">Calories per serving: <%= @recipe.cal_per_serving %></span>
+  <span class="properties">Difficulty: <%= @recipe.difficulty %></span>
 </div>
 
 <div class="flex">
