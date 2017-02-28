@@ -47,7 +47,10 @@ class MealsController < ApplicationController
   end
 
   def remove
-
+    @meal = Meal.find(params[:id])
+    @fav = current_user.favorites.find_by(meal: @meal)
+    @fav.destroy
+    redirect_to '/recipe_box'
   end
 
   private

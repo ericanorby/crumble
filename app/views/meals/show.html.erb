@@ -1,6 +1,11 @@
-<h1><%= @meal.name %></h1>
-
-<%= link_to "Add to mealbox", add_meal_path(@meal), method: :post %>
+<div class="inline">
+  <h1><%= @meal.name %></h1>
+  <% if current_user.favorites.exists?(meal: @meal) %>
+    <p style="float:right;"><%= link_to "Remove from your recipe box", remove_meal_path(@meal), method: :delete %></p>
+  <% else %>
+    <p style="float:right;">&hearts; <%= link_to "Add to your recipe box", add_meal_path(@meal), method: :post %></p>
+  <% end %>
+</div>
 
 <span>Servings: <%= @meal.servings %></span>
 <span>Total Cost: <%= number_to_currency(@meal.total_cost, options = {precision: 2}) %></span>
