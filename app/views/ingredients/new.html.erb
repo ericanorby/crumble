@@ -2,16 +2,19 @@
 
 <%= form_for [@recipe,@ingredient] do |f| %>
   <%= f.label :name %><br>
-  <%= f.text_field :name %>
-  <br><br>
-  <%= f.label :amount %><br>
-  <%= f.number_field :amount %>
+  <%= f.text_field :name, required: true %>
   <br>
-  <%= f.label :measurement %><br>
+  <%= f.label :amount %><br>
+  <%= f.number_field :amount, required: true %>
+  <br>
+  <%= f.label :measurement %>
+  <br>
+  <span class="info">(cup, tbsp, slice, lb, etc.)</span>
+  <br>
   <%= f.text_field :measurement %>
   <br>
   <%= f.label :calories %><br>
-  <%= f.number_field :calories %>
+  <%= f.number_field :calories, required: true %>
   <br>
   <%= f.submit %>
 <% end %>

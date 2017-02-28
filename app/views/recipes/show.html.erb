@@ -7,6 +7,8 @@
   <% end %>
 </div>
 
+&#8656; <%= link_to "Back to recipes", recipes_path %>
+
 <p>Uploaded by <%= @recipe.author %></p>
 
 <div class="flex">
@@ -14,7 +16,9 @@
   <span class="properties">Total Cost: <%= number_to_currency(@recipe.total_cost, options = {precision: 2}) %></span>
   <span class="properties">Cost per serving: <%= number_to_currency(@recipe.cost_per_serving, options = {precision: 2}) %></span>
   <span class="properties">Calories per serving: <%= @recipe.cal_per_serving %></span>
-  <span class="properties">Difficulty: <%= @recipe.difficulty %></span>
+  <% if @recipe.difficulty? %>
+    <span class="properties">Difficulty: <%= @recipe.difficulty %></span>
+  <% end %>
 </div>
 
 <div class="flex">

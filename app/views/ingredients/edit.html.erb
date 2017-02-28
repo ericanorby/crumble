@@ -1,17 +1,20 @@
 <h1>Edit Ingredient</h1>
 
 <%= form_for [@recipe,@ingredient] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name, required: true %>
   <br>
-  <%= f.label :amount %>
-  <%= f.number_field :amount %>
+  <%= f.label :amount %><br>
+  <%= f.number_field :amount, required: true %>
   <br>
   <%= f.label :measurement %>
+  <br>
+  <span class="info">(cup, tbsp, slice, lb, etc.)</span>
+  <br>
   <%= f.text_field :measurement %>
   <br>
-  <%= f.label :calories %>
-  <%= f.number_field :calories %>
+  <%= f.label :calories %><br>
+  <%= f.number_field :calories, required: true %>
   <br>
   <%= f.submit %>
 <% end %>

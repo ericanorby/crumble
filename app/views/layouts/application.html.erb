@@ -31,8 +31,9 @@
     </div>
     <nav>
       <% if current_user %>
-      <%= link_to "Your Recipe Box", "/recipe_box" %>  
-      <%= link_to "Browse Recipes", recipes_path %>
+      <%= link_to "Your Recipe Box", "/recipe_box" %>
+      <%= link_to "All Recipes", recipes_path %>
+      <%= link_to "Upload Recipe", new_recipe_path %>
       <% end %>
     </nav>
 

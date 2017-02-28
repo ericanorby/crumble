@@ -101,6 +101,7 @@ textarea {
   height: 100%;
   border: 1px solid rgb(139, 128, 195);
   margin: 5px 0;
+  background: rgb(251, 249, 217);
 }
 
 input[type=text],
@@ -111,6 +112,7 @@ input[type=email] {
   padding: 8px;
   border: 1px solid rgb(139, 128, 195);
   margin: 5px 0 10px 0;
+  background: rgb(251, 249, 217);
 }
 
 input[type=number] {
@@ -119,6 +121,7 @@ input[type=number] {
   padding: 8px;
   border: 1px solid rgb(139, 128, 195);
   margin: 5px 0px 10px 0;
+  background: rgb(251, 249, 217);
 }
 
 input[type=submit] {
@@ -149,6 +152,12 @@ input[type=submit] {
 .email {
   font-size: 16px;
   color: rgb(249, 244, 160);
+}
+
+.info {
+  font-size: 16px;
+  font-style: italic;
+  color: gray;
 }
 
 .ingredients h3 {

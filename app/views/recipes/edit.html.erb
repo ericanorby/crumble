@@ -1,23 +1,43 @@
 <h1>Edit Recipe</h1>
 
-<%= form_for @recipe do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br>
-  <%= f.label :photo_url %>
-  <%= f.text_field :photo_url %>
-  <br>
-  <%= f.label :servings %>
-  <%= f.number_field :servings %>
-  <br>
-  <%= f.label :total_cost %>
-  <%= f.number_field :total_cost %>
-  <br>
-  <%= f.label :difficulty %>
-  <%= f.text_field :difficulty %>
-  <br>
-  <%= f.label :directions %>
-  <%= f.text_area :directions %>
-  <br>
-  <%= f.submit %>
+<%= form_for @recipe do |f|%>
+<div class="add-recipe">
+    <div>
+        <%= f.label :name %><br>
+        <%= f.text_field :name, required: true %>
+        <br>
+        <%= f.label :photo_url %><br>
+        <%= f.text_field :photo_url %>
+        <br>
+        <div class="flex-no-wrap">
+            <div>
+                <%= f.label :servings %><br>
+                <%= f.number_field :servings, required: true %>
+            </div>
+            <div style="margin-left: 30px;">
+                <%= f.label :"total_cost ($)" %><br>
+                <%= f.number_field :total_cost, required: true %>
+            </div>
+        </div>
+        <%= f.label :difficulty %><br>
+
+        <div class="difficulty">
+            <%= f.radio_button(:difficulty, "easy") %>
+            <%= f.label(:difficulty, "easy") %>
+
+            <%= f.radio_button(:difficulty, "medium") %>
+            <%= f.label(:difficulty, "medium") %>
+
+            <%= f.radio_button(:difficulty, "hard") %>
+            <%= f.label(:difficulty, "hard") %>
+        </div>
+    </div>
+    <div>
+        <%= f.label :directions %><br>
+        <%= f.text_area :directions, required: true %>
+        <br>
+    </div>
+</div>
+<%= f.submit %>
+
 <% end %>
