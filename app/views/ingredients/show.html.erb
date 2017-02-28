@@ -5,7 +5,9 @@
 <p>Measurement: <%= @ingredient.measurement %></p>
 <p>Calories: <%= @ingredient.calories %></p>
 
+<% if current_user.email == @recipe.author %>
 <p>
 <%= link_to "Edit", edit_recipe_ingredient_path(@recipe,@ingredient) %> |
 <%= link_to "Delete", recipe_ingredient_path(@recipe,@ingredient), method: :delete %>
 </p>
+<% end %>

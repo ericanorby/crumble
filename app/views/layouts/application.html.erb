@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= favicon_link_tag %>
+    <script src="https://use.fontawesome.com/573953d01d.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic|Montserrat+Alternates" rel="stylesheet">
-    <title>Recipes</title>
+    <title>Crumble</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,8 +13,8 @@
 
   <body>
     <header>
-      <div style="display:flex;">
-        <%= image_tag("logo.png") %>
+      <div class="flex-end">
+        <%= image_tag("logo2.png") %>
         <h1>crumble</h1>
       </div>
       <div>
@@ -25,6 +27,8 @@
         <% end %>
       </div>
     </header>
+    <div id="placeholder">
+    </div>
     <nav>
       <% if current_user %>
       <%= link_to "Your Recipe Box", "/recipe_box" %>

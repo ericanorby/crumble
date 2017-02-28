@@ -1,6 +1,6 @@
 <h1>Edi Recipe</h1>
 
-<%= form_for @meal do |f| %>
+<%= form_for @recipe do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br>
@@ -8,10 +8,10 @@
   <%= f.text_field :photo_url %>
   <br>
   <%= f.label :servings %>
-  <%= f.text_field :servings %>
+  <%= f.number_field :servings %>
   <br>
   <%= f.label :total_cost %>
-  <%= f.text_field :total_cost %>
+  <%= f.number_field :total_cost %>
   <br>
   <%= f.label :difficulty %>
   <%= f.text_field :difficulty %>

@@ -3,17 +3,19 @@
   <% if current_user.favorites.exists?(recipe: @recipe) %>
     <p style="float:right;"><%= link_to "Remove from your recipe box", remove_recipe_path(@recipe), method: :delete %></p>
   <% else %>
-    <p style="float:right;">&hearts; <%= link_to "Add to your recipe box", add_recipe_path(@recipe), method: :post %></p>
+    <p style="float:right;"><i class="fa fa-cutlery" aria-hidden="true"></i> <%= link_to "Add to your recipe box", add_recipe_path(@recipe), method: :post %></p>
   <% end %>
 </div>
 
-<p>Uploaded by: <%= @recipe.author %></p>
+<p>Uploaded by <%= @recipe.author %></p>
 
-<span>Servings: <%= @recipe.servings %></span>
-<span>Total Cost: <%= number_to_currency(@recipe.total_cost, options = {precision: 2}) %></span>
-<span>Cost per serving: <%= number_to_currency(@recipe.cost_per_serving, options = {precision: 2}) %></span>
-<span>Difficulty: <%= @recipe.difficulty %></span>
-<span>Calories per serving: <%= @recipe.cal_per_serving %></span>
+<div class="flex">
+  <span>Servings: <%= @recipe.servings %></span>
+  <span>Total Cost: <%= number_to_currency(@recipe.total_cost, options = {precision: 2}) %></span>
+  <span>Cost per serving: <%= number_to_currency(@recipe.cost_per_serving, options = {precision: 2}) %></span>
+  <span>Calories per serving: <%= @recipe.cal_per_serving %></span>
+  <span>Difficulty: <%= @recipe.difficulty %></span>
+</div>
 
 <div class="flex">
   <div class="show" style="background-image: url(<%= @recipe.photo_url %>)"></div>
@@ -24,11 +26,17 @@
     <% @ingredients.each do |ingredient| %>
     <li>
       <%= link_to ingredient.name, recipe_ingredient_path(@recipe, ingredient)%> -
-      <%= ingredient.amount %>
+      <% if ingredient.amount != ingredient.amount.to_i %>
+        <%= ingredient.amount.to_r %>
+        <% else %>
+        <%= number_with_precision(ingredient.amount, options = {precision: 0}) %>
+        <% end %>
       <%= ingredient.measurement %>
     </li>
     <% end %>
-    <%= link_to "+ Add Ingredient", new_recipe_ingredient_path(@recipe), class: "add-ingredient" %>
+    <% if current_user.email == @recipe.author %>
+      <%= link_to "+ Add Ingredient", new_recipe_ingredient_path(@recipe), class: "add-ingredient" %>
+    <% end %>
   </ul>
 </div>
 
@@ -37,7 +45,9 @@
 <h3>Directions</h3>
 <p><%= @recipe.directions %></p>
 
-<p style="text-align:right;">
-<%= link_to "Edit", edit_recipe_path(@recipe) %> |
-<%= link_to "Delete", recipe_path(@recipe), method: :delete %>
-</p>
+<% if current_user.email == @recipe.author %>
+  <p style="text-align:right;">
+    <%= link_to "Edit", edit_recipe_path(@recipe) %> |
+    <%= link_to "Delete", recipe_path(@recipe), method: :delete %>
+  </p>
+<% end %>

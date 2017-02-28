@@ -19,6 +19,7 @@ body {
   line-height: 1.4;
   font-size: 18px;
   font-family: 'Carrois Gothic', sans-serif;
+  background: rgb(253, 253, 253);
 }
 
 header {
@@ -41,7 +42,13 @@ header * {
 }
 
 header img {
-  height: 100px;
+  height: 50px;
+  margin-bottom: 25px;
+  padding-right: 0px;
+}
+
+i {
+  color: gray;
 }
 
 nav {
@@ -51,22 +58,26 @@ nav {
   border-bottom: 1px solid silver;
 }
 
+.placeholder {
+  height: 50px;
+}
+
 nav a {
   padding: 10px;
   color: black;
 }
 
 a:hover {
-  color: rgb(118, 111, 246);
+  color: rgb(139, 128, 195);
 }
 
 a {
   text-decoration: none;
-  color: rgb(80, 47, 245);
+  color: rgb(60, 33, 195);
 }
 
 main {
-  padding: 20px;
+  padding: 30px;
   width: 80%;
   margin: 0 auto;
 }
@@ -96,7 +107,11 @@ input[type="submit"] {
 }
 
 span {
-  padding-right: 10px;
+  padding: 10px;
+  border: 1px solid rgb(249, 244, 160);
+  border-radius: 5px;
+  margin: 5px;
+  background: rgb(251, 249, 217);
 }
 
 .ingredients h3 {
@@ -160,4 +175,11 @@ li {
   text-align: center;
   width: 200px;
   margin: 20px;
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
