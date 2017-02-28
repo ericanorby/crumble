@@ -1,4 +1,4 @@
-&#8656; <%= link_to "Back to #{@meal.name}", meal_path(@meal) %>
+&#8656; <%= link_to "Back to #{@recipe.name}", recipe_path(@recipe) %>
 
 <h3><%= @ingredient.name %></h3>
 <p>Amount: <%= @ingredient.amount %></p>
@@ -6,6 +6,6 @@
 <p>Calories: <%= @ingredient.calories %></p>
 
 <p>
-<%= link_to "Edit", edit_meal_ingredient_path(@meal,@ingredient) %> |
-<%= link_to "Delete", meal_ingredient_path(@meal,@ingredient), method: :delete %>
+<%= link_to "Edit", edit_recipe_ingredient_path(@recipe,@ingredient) %> |
+<%= link_to "Delete", recipe_ingredient_path(@recipe,@ingredient), method: :delete %>
 </p>

@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20170227212451) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "meal_id"
-    t.index ["meal_id"], name: "index_favorites_on_meal_id", using: :btree
+    t.integer "recipe_id"
+    t.index ["recipe_id"], name: "index_favorites_on_recipe_id", using: :btree
     t.index ["user_id"], name: "index_favorites_on_user_id", using: :btree
   end
 
@@ -27,11 +27,12 @@ ActiveRecord::Schema.define(version: 20170227212451) do
     t.decimal "amount"
     t.string  "measurement"
     t.integer "calories"
-    t.integer "meal_id"
-    t.index ["meal_id"], name: "index_ingredients_on_meal_id", using: :btree
+    t.integer "recipe_id"
+    t.index ["recipe_id"], name: "index_ingredients_on_recipe_id", using: :btree
   end
 
-  create_table "meals", force: :cascade do |t|
+  create_table "recipes", force: :cascade do |t|
+    t.string  "author"
     t.string  "name"
     t.string  "photo_url"
     t.integer "servings"
@@ -59,6 +60,6 @@ ActiveRecord::Schema.define(version: 20170227212451) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "favorites", "meals"
+  add_foreign_key "favorites", "recipes"
   add_foreign_key "favorites", "users"
 end

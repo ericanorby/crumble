@@ -5,7 +5,7 @@ class CreateIngredients < ActiveRecord::Migration[5.0]
       t.decimal :amount
       t.string :measurement
       t.integer :calories
-      t.references :meal
+      t.references :recipe
     end
   end
 end

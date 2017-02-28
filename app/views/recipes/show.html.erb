@@ -7,6 +7,8 @@
   <% end %>
 </div>
 
+<p>Uploaded by: <%= @recipe.author %></p>
+
 <span>Servings: <%= @recipe.servings %></span>
 <span>Total Cost: <%= number_to_currency(@recipe.total_cost, options = {precision: 2}) %></span>
 <span>Cost per serving: <%= number_to_currency(@recipe.cost_per_serving, options = {precision: 2}) %></span>

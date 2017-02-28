@@ -26,8 +26,10 @@
       </div>
     </header>
     <nav>
+      <% if current_user %>
       <%= link_to "Your Recipe Box", "/recipe_box" %>
-      <%= link_to "Browse Recipes", meals_path %>
+      <% end %>
+      <%= link_to "Browse Recipes", recipes_path %>
     </nav>
 
     <main>

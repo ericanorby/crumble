@@ -1,38 +1,38 @@
 class IngredientsController < ApplicationController
 
   def show
-    @meal = Meal.find(params[:meal_id])
-    @ingredient = @meal.ingredients.find(params[:id])
+    @recipe = Recipe.find(params[:recipe_id])
+    @ingredient = @recipe.ingredients.find(params[:id])
   end
 
   def new
-    @meal = Meal.find(params[:meal_id])
-    @ingredient = @meal.ingredients.new
+    @recipe = Recipe.find(params[:recipe_id])
+    @ingredient = @recipe.ingredients.new
   end
 
   def create
-    @meal = Meal.find(params[:meal_id])
-    @ingredient = @meal.ingredients.create(ingredient_params)
-    redirect_to meal_path(@meal)
+    @recipe = Recipe.find(params[:recipe_id])
+    @ingredient = @recipe.ingredients.create(ingredient_params)
+    redirect_to recipe_path(@recipe)
   end
 
   def edit
-    @meal = Meal.find(params[:meal_id])
-    @ingredient = @meal.ingredients.find(params[:id])
+    @recipe = Recipe.find(params[:recipe_id])
+    @ingredient = @recipe.ingredients.find(params[:id])
   end
 
   def update
-    @meal = Meal.find(params[:meal_id])
-    @ingredient = @meal.ingredients.find(params[:id])
+    @recipe = Recipe.find(params[:recipe_id])
+    @ingredient = @recipe.ingredients.find(params[:id])
     @ingredient.update(ingredient_params)
-    redirect_to meal_ingredient_path(@meal,@ingredient)
+    redirect_to recipe_ingredient_path(@recipe,@ingredient)
   end
 
   def destroy
-    @meal = Meal.find(params[:meal_id])
-    @ingredient = @meal.ingredients.find(params[:id])
+    @recipe = Recipe.find(params[:recipe_id])
+    @ingredient = @recipe.ingredients.find(params[:id])
     @ingredient.destroy
-    redirect_to meal_path(@meal)
+    redirect_to recipe_path(@recipe)
   end
 
   private
