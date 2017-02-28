@@ -19,10 +19,20 @@
                 <%= f.number_field :total_cost %>
             </div>
         </div>
-
         <%= f.label :difficulty %><br>
-        <%= f.text_field :difficulty %>
-        <br>
+
+        <div class="difficulty">
+          <%= f.radio_button(:difficulty, "easy") %>
+          <%= f.label(:difficulty, "easy") %>
+
+          <%= f.radio_button(:difficulty, "medium") %>
+          <%= f.label(:difficulty, "medium") %>
+
+          <%= f.radio_button(:difficulty, "hard") %>
+          <%= f.label(:difficulty, "hard") %>
+        </div>
+
+
     </div>
     <div>
         <%= f.label :directions %><br>

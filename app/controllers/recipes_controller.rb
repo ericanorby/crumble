@@ -45,7 +45,7 @@ class RecipesController < ApplicationController
   def add
     @recipe = Recipe.find(params[:id])
     current_user.favorites.create(recipe: @recipe)
-    flash[:notice] = "Added to your meal box!"
+    flash[:notice] = "Added to your recipe box!"
     redirect_to recipe_path(@recipe)
   end
 
@@ -53,7 +53,8 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @fav = current_user.favorites.find_by(recipe: @recipe)
     @fav.destroy
-    redirect_to '/recipe_box'
+    flash[:notice] = "Removed from your recipe box."
+    redirect_to recipe_path(@recipe)
   end
 
   private
