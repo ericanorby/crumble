@@ -34,11 +34,7 @@
     <% @ingredients.each do |ingredient| %>
     <li>
       <%= link_to ingredient.name, recipe_ingredient_path(@recipe, ingredient)%> -
-      <% if ingredient.amount != ingredient.amount.to_i %>
-        <%= ingredient.amount.to_r %>
-        <% else %>
-        <%= number_with_precision(ingredient.amount, options = {precision: 0}) %>
-        <% end %>
+      <%= ingredient.amount %>
       <%= ingredient.measurement %>
     </li>
     <% end %>

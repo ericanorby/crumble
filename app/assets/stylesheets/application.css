@@ -145,6 +145,10 @@ input[type=submit] {
   background: lightgray;
 }
 
+sup {
+  color: darkred;
+}
+
 .difficulty label {
   margin-right: 10px;
 }

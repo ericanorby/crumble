@@ -10,11 +10,11 @@ User.destroy_all
 Recipe.destroy_all
 Ingredient.destroy_all
 
-norbsie = User.create(email: "erica@blah.com", password: "helloworld")
-will = User.create(email: "will@blah.com", password: "helloworld")
-eva = User.create(email: "eva@blah.com", password: "helloworld")
+norbsie = User.create(email: "erica@email.com", password: "helloworld")
+will = User.create(email: "will@email.com", password: "helloworld")
+eva = User.create(email: "eva@email.com", password: "helloworld")
 
-shephards_pie = Recipe.create(author: norbsie.email, name: "Shephard's Pie", source_url: "https://www.tastemade.com/shows/healthy-af/shepherds-pie-with-cauliflower-mash", photo_url: "http://images.media-allrecipes.com/userphotos/250x250/980198.jpg", servings: 6, total_cost: 15, difficulty: "easy", directions: "	1. Preheat the oven to 400 degrees. Grease a casserole dish and set aside.
+shephards_pie = Recipe.create(author: norbsie.email, name: "Shephard's Pie w/ Cauliflower", source_url: "https://www.tastemade.com/shows/healthy-af/shepherds-pie-with-cauliflower-mash", photo_url: "http://www.ovenloveblog.com/wp-content/uploads/2013/09/sheppie5.jpg", servings: 6, total_cost: 15, difficulty: "easy", directions: "	1. Preheat the oven to 400 degrees. Grease a casserole dish and set aside.
 	2. In a large pot, steam or boil cauliflower until tender.
 	3. Heat 2 tablespoons of oil in a large skillet over medium high heat. Add the onion, celery, carrots and garlic and cook for 5 minutes.
 	4. Add the ground beef to the pan and cook until browned. Add the parsley and season with salt and pepper. Let simmer while you prepare the cauliflower topping.
@@ -48,7 +48,7 @@ salmon = Recipe.create(author: norbsie.email, name: "Maple Glazed Salmon", photo
 Place salmon in a shallow glass baking dish, and coat with the maple syrup mixture. Cover the dish, and marinate salmon in the refrigerator 30 minutes, turning once.
 Preheat oven to 400 degrees F (200 degrees C).
 Place the baking dish in the preheated oven, and bake salmon uncovered 20 minutes, or until easily flaked with a fork.")
-pasta = Recipe.create(author: norbsie.email, name: "Buffalo Chicken Cheesy Pasta", source_url: "http://whitneybond.com/2012/02/23/whats-for-lunch-buffalo-chicken-cheesy-penne/", photo_url: "http://whitneybond.com/wp-content/uploads/2012/02/IMG_1420.jpg", servings: 4, total_cost: 30, difficulty: "medium", directions: "Heat a large skillet over medium heat.
+pasta = Recipe.create(author: norbsie.email, name: "Buffalo Chicken Cheesy Pasta", source_url: "http://whitneybond.com/2012/02/23/whats-for-lunch-buffalo-chicken-cheesy-penne/", photo_url: "http://whitneybond.com/wp-content/uploads/2012/02/IMG_1420.jpg", servings: 4, total_cost: 18, difficulty: "medium", directions: "Heat a large skillet over medium heat.
 Add the cream cheese, buffalo sauce and chicken broth.
 Whisk until creamy.
 Add the paprika, garlic powder, black pepper and salt.
@@ -58,6 +58,18 @@ Stir to combine
 Add the shredded chicken.
 Allow the sauce to simmer for 10 minutes over low heat.
 In the meantime, boil a large pot of water and cook the penne pasta according to package directions, drain, add to the cheesy buffalo chicken sauce and stir to combine.")
+pad_thai = Recipe.create(author: norbsie.email, name: "Pad Thai", source_url: "http://www.peanutbutterrunner.com/the-best-easy-homemade-pad-thai-recipe/", photo_url: "https://i2.wp.com/www.peanutbutterrunner.com/wp-content/uploads/2015/04/Homemade-Pad-Thai-Recipe.jpg", servings: 3, total_cost: 25, difficulty: "medium", directions: "Whisk together sauce ingredients and set aside.
+Cook noodles according to package direction. Rinse and set aside in a colander.
+Preheat a skillet over medium heat and add oil. Add chicken breast and cook until browned and mostly cooked through. Push the chicken over to one side of the skillet and pour the beaten egg into the skillet in the space you've created and use your cooking spatula to scramble the egg in the skillet. Add the shrimp and keep cooking for about another minute.
+Add the noodles to the skillet and then pour the sauce over the noodles. You might want to reduce the heat a little at this point to more like medium-low. The mixture will be saucy at first but let it cook for another 3-5 minutes, stirring frequently. The noodles and proteins will soak up the sauce and it will thicken. Stir the bean sprouts in once everything has thickened and remove from heat. Use a pasta sever to scoop the noodle mixture from the skillet and into shallow bowls (or onto plates).
+Top with desired toppings and adjust spice level with Sriracha." )
+burrito = Recipe.create(author: norbsie.email, name: "Freezer Breakfast Burritos", source_url: "http://www.thekitchn.com/how-to-make-freezer-friendly-breakfast-burritos-234556", photo_url: "http://atmedia.imgix.net/d94c6c6669d456660950646b4ae0cf730854b470?w=1500&fit=max", servings: 12, total_cost: 40, difficulty: "medium", directions: "Heat the oven: Arrange a rack in the middle of the oven and heat to 400°F. Prepare space in the freezer for a baking sheet.
+Roast your vegetables: Combine the potatoes, peppers, and onions together in a medium bowl. Drizzle with the oil and 1/2 teaspoon of the salt, and toss to coat. Transfer to an even layer on a baking sheet and roast until the potatoes are tender, about 20 minutes.
+Cook your eggs: While the veggies roast, whisk together the eggs, milk, and remaining 1/2 teaspoon salt until combined. Melt the butter in a 10-inch skillet (cast iron or nonstick would be ideal) over medium heat. Add the eggs and cook, stirring occasionally, until mostly set but still moist, 4 to 5 minutes. Remove from the heat.
+Assemble the burritos: Let the eggs and roasted vegetables cool while you set up an assembly station — the eggs and vegetables should be room temperature for best assembly. Tear off 12 squares of aluminum foil. Have your cheese and tortillas standing by. Place a tortilla on top of a piece of foil. Sprinkle 2 tablespoons of cheese onto the tortilla. Top the cheese with 1/4 cup roasted vegetables, followed by 2 heaping tablespoons of the scrambled eggs, and any extra toppings.
+Fold the burritos: Roll the burrito tightly by folding the sides over the filling, then rolling from the bottom up.
+Wrap and freeze: Wrap the burrito tightly in the aluminum foil and repeat with filling and folding the remaining burritos. Freeze the burritos in a single layer on a baking sheet — they'll freeze faster and more uniformly this way. Store frozen burritos in a gallon-sized zip-top freezer bag for longer-term freezing.
+To eat: Unwrap and microwave on high for 1 to 2 minutes, until warmed through, or heat in a regular or toaster oven at 350°F for 12 to 15 minutes.")
 
 Ingredient.create(name: "Cauliflower", amount: 2, measurement: "head", calories: 30, recipe: shephards_pie)
 Ingredient.create(name: "Olive oil", amount: 2, measurement: "tbsp", calories: 200, recipe: shephards_pie)
@@ -76,14 +88,14 @@ Ingredient.create(name: "Eggs", amount: 7, measurement: nil, calories: 500, reci
 Ingredient.create(name: "Cottage Cheese", amount: 2, measurement: "cups", calories: 400, recipe: egg_muffin)
 Ingredient.create(name: "Turkey Bacon", amount: 5, measurement: "strips", calories: 300, recipe: egg_muffin)
 
-Ingredient.create(name: "Almonds", amount: 0.66, measurement: "cup", calories: 120, recipe: pb_bars)
-Ingredient.create(name: "Cashews", amount: 0.66, measurement: "cup", calories: 130, recipe: pb_bars)
-Ingredient.create(name: "Rolled oats", amount: 1.5, measurement: "cup", calories: 200, recipe: pb_bars)
-Ingredient.create(name: "Ground flax", amount: 0.33, measurement: "cup", calories: 80, recipe: pb_bars)
-Ingredient.create(name: "Mini chocolate chips", amount: 0.5, measurement: "cup", calories: 140, recipe: pb_bars)
-Ingredient.create(name: "Dried cranberries", amount: 0.33, measurement: "cup", calories: 50, recipe: pb_bars)
-Ingredient.create(name: "Raisins", amount: 0.33, measurement: "cup", calories: 50, recipe: pb_bars)
-Ingredient.create(name: "Honey", amount: 0.5, measurement: "cup", calories: 300, recipe: pb_bars)
+Ingredient.create(name: "Almonds", amount: "2/3", measurement: "cup", calories: 120, recipe: pb_bars)
+Ingredient.create(name: "Cashews", amount: "2/3", measurement: "cup", calories: 130, recipe: pb_bars)
+Ingredient.create(name: "Rolled oats", amount: "1 1/2", measurement: "cup", calories: 200, recipe: pb_bars)
+Ingredient.create(name: "Ground flax", amount: "1/3", measurement: "cup", calories: 80, recipe: pb_bars)
+Ingredient.create(name: "Mini chocolate chips", amount: "1/2", measurement: "cup", calories: 140, recipe: pb_bars)
+Ingredient.create(name: "Dried cranberries", amount: "1/3", measurement: "cup", calories: 50, recipe: pb_bars)
+Ingredient.create(name: "Raisins", amount: "1/3", measurement: "cup", calories: 50, recipe: pb_bars)
+Ingredient.create(name: "Honey", amount: "1/2", measurement: "cup", calories: 300, recipe: pb_bars)
 Ingredient.create(name: "Peanut butter", amount: 1, measurement: "cup", calories: 600, recipe: pb_bars)
 
 Ingredient.create(name: "Cauliflower", amount: 1, measurement: "head", calories: 100, recipe: chickpea)
@@ -93,23 +105,23 @@ Ingredient.create(name: "Ginger", amount: 1, measurement: "tbsp", calories: 30, 
 Ingredient.create(name: "Garam masala", amount: 1, measurement: "tbsp", calories: 40, recipe: chickpea)
 Ingredient.create(name: "Cayenne pepper", amount: 1, measurement: "tsp", calories: 10, recipe: chickpea)
 Ingredient.create(name: "Chickpeas", amount: 2, measurement: "cans", calories: 150, recipe: chickpea)
-Ingredient.create(name: "Cilantro", amount: 0.5, measurement: "cup", calories: 10, recipe: chickpea)
+Ingredient.create(name: "Cilantro", amount: "1/2", measurement: "cup", calories: 10, recipe: chickpea)
 Ingredient.create(name: "Wheat tortilla", amount: 6, measurement: "large", calories: 600, recipe: chickpea)
 Ingredient.create(name: "Plain greek yogurt", amount: 1, measurement: "cup", calories: 300, recipe: chickpea)
 Ingredient.create(name: "Garlic", amount: 1, measurement: "clove", calories: 60, recipe: chickpea)
 
-Ingredient.create(name: "Maple syrup", amount: 0.25, measurement: "cup", calories: 300, recipe: salmon)
+Ingredient.create(name: "Maple syrup", amount: "1/4", measurement: "cup", calories: 300, recipe: salmon)
 Ingredient.create(name: "Soy sauce", amount: 2, measurement: "tbsp", calories: 140, recipe: salmon)
 Ingredient.create(name: "Garlic", amount: 1, measurement: "clove", calories: 30, recipe: salmon)
-Ingredient.create(name: "Salt", amount: 0.25, measurement: "tsp", calories: 10, recipe: salmon)
-Ingredient.create(name: "Black pepper", amount: 0.125, measurement: "tsp", calories: 10, recipe: salmon)
+Ingredient.create(name: "Salt", amount: "1/4", measurement: "tsp", calories: 10, recipe: salmon)
+Ingredient.create(name: "Black pepper", amount: "1/8", measurement: "tsp", calories: 10, recipe: salmon)
 Ingredient.create(name: "Salmon", amount: 1, measurement: "lb", calories: 944, recipe: salmon)
 
 Ingredient.create(name: "Shredded chicken breast", amount: 2, measurement: "cups", calories: 300, recipe: pasta)
 Ingredient.create(name: "Cream cheese", amount: 8, measurement: "oz", calories: 776, recipe: pasta)
-Ingredient.create(name: "Buffalo sauce", amount: 0.33, measurement: "cup", calories: 300, recipe: pasta)
-Ingredient.create(name: "Chicken broth", amount: 0.5, measurement: "cup", calories: 200, recipe: pasta)
+Ingredient.create(name: "Buffalo sauce", amount: "1/3", measurement: "cup", calories: 300, recipe: pasta)
+Ingredient.create(name: "Chicken broth", amount: "1/2", measurement: "cup", calories: 200, recipe: pasta)
 Ingredient.create(name: "Penne pasta", amount: 12, measurement: "oz", calories: 500, recipe: pasta)
-Ingredient.create(name: "Blue cheese dressing", amount: 0.75, measurement: "cup", calories: 500, recipe: pasta)
+Ingredient.create(name: "Blue cheese dressing", amount: "3/4", measurement: "cup", calories: 500, recipe: pasta)
 Ingredient.create(name: "Paprika", amount: 1, measurement: "tsp", calories: 10, recipe: pasta)
 Ingredient.create(name: "Garlic powder", amount: 1, measurement: "tsp", calories: 10, recipe: pasta)

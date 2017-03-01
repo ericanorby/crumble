@@ -1,11 +1,13 @@
 <h1>Add New Ingredient</h1>
 
 <%= form_for [@recipe,@ingredient] do |f| %>
-  <%= f.label :name %><br>
+  <%= f.label :name %><sup>*</sup><br>
   <%= f.text_field :name, required: true %>
   <br>
-  <%= f.label :amount %><br>
-  <%= f.number_field :amount, required: true %>
+  <%= f.label :amount %><sup>*</sup><br>
+  <span class="info">(whole number, fraction)</span>
+  <br>
+  <%= f.text_field :amount, required: true %>
   <br>
   <%= f.label :measurement %>
   <br>
@@ -13,7 +15,7 @@
   <br>
   <%= f.text_field :measurement %>
   <br>
-  <%= f.label :calories %><br>
+  <%= f.label :calories %><sup>*</sup><br>
   <%= f.number_field :calories, required: true %>
   <br>
   <%= f.submit %>

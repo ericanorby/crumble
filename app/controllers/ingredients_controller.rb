@@ -1,7 +1,7 @@
 class IngredientsController < ApplicationController
 
   before_action :authenticate_user!
-  
+
   def show
     @recipe = Recipe.find(params[:recipe_id])
     @ingredient = @recipe.ingredients.find(params[:id])
@@ -40,7 +40,7 @@ class IngredientsController < ApplicationController
   private
 
   def ingredient_params
-    params.require(:ingredient).permit(:name, :amount, :calories)
+    params.require(:ingredient).permit(:name, :amount, :measurement, :calories)
   end
 
 end
