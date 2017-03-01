@@ -81,6 +81,11 @@ nav {
   height: 50px;
 }
 
+.small {
+  font-size: 14px;
+  margin-top: -12px;
+}
+
 nav a {
   padding: 10px;
   font-weight: bold;

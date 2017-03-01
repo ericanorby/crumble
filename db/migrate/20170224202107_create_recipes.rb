@@ -3,6 +3,7 @@ class CreateRecipes < ActiveRecord::Migration[5.0]
     create_table :recipes do |t|
       t.string :author
       t.string :name
+      t.string :source_url
       t.string :photo_url
       t.integer :servings
       t.decimal :total_cost

@@ -11,6 +11,10 @@
 
 <p>Uploaded by <%= @recipe.author %></p>
 
+<% if @recipe.source_url? %>
+  <p class="small">Adapted from: <%= link_to @recipe.source_url, "#{@recipe.source_url}" %></p>
+<% end %>
+
 <div class="flex">
   <span class="properties">Servings: <%= @recipe.servings %></span>
   <span class="properties">Total Cost: <%= number_to_currency(@recipe.total_cost, options = {precision: 2}) %></span>

@@ -3,19 +3,24 @@
 <%= form_for @recipe do |f|%>
 <div class="add-recipe">
     <div>
-        <%= f.label :name %><br>
+        <%= f.label :name %><sup>*</sup><br>
         <%= f.text_field :name, required: true %>
+        <br>
+        <%= f.label :source_url %><br>
+        <span class="info">Is this recipe adapted from somewhere?<br>If so, please enter the source:</span>
+        <br>
+        <%= f.text_field :source_url %>
         <br>
         <%= f.label :photo_url %><br>
         <%= f.text_field :photo_url %>
         <br>
         <div class="flex-no-wrap">
             <div>
-                <%= f.label :servings %><br>
+                <%= f.label :servings %><sup>*</sup><br>
                 <%= f.number_field :servings, required: true %>
             </div>
             <div style="margin-left: 30px;">
-                <%= f.label :"total_cost ($)" %><br>
+                <%= f.label :"total_cost ($)" %><sup>*</sup><br>
                 <%= f.number_field :total_cost, required: true %>
             </div>
         </div>
@@ -33,7 +38,7 @@
         </div>
     </div>
     <div>
-        <%= f.label :directions %><br>
+        <%= f.label :directions %><sup>*</sup><br>
         <%= f.text_area :directions, required: true %>
         <br>
     </div>
