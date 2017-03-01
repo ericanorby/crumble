@@ -2,10 +2,15 @@
 
   <h1>Welcome to Crumble!</h1>
   <h3>Meal prep made easy.</h3>
-  <br>
+  <div id="animate-food">
+    <%= image_tag("veggies2.jpg") %>
+    <%= image_tag("veggies3.jpg") %>
+    <br>
+    <%= image_tag("veggies1.jpg") %>
+    <%= image_tag("veggies4.jpg") %>
+    <br>
+  </div>
   <p>Ready to start browsing and uploading recipes?</p>
-  <p>Log in or Sign up to continue.</p>
-
-
+  <p><%= link_to "Log in", new_user_session_path %> or <%= link_to "Sign up", new_user_registration_path %> to continue.</p>
 
 </div>
