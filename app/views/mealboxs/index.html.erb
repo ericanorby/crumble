@@ -4,7 +4,7 @@
 </div>
 
 <% if current_user.favorites.length == 0 %>
-  <p>Recipe box is empty <i class="fa fa-frown-o" aria-hidden="true"></i> Add some recipes!</p>
+  <p>Recipe box is empty <i class="fa fa-frown-o" aria-hidden="true"></i> <%= link_to "Add some recipes!", recipes_path %></p>
 <% else %>
   <div class="flex-end">
       <% @favorites.each do |fav| %>

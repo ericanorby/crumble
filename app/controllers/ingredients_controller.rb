@@ -1,5 +1,7 @@
 class IngredientsController < ApplicationController
 
+  before_action :authenticate_user!
+  
   def show
     @recipe = Recipe.find(params[:recipe_id])
     @ingredient = @recipe.ingredients.find(params[:id])

@@ -18,6 +18,10 @@
   font-family: 'Carrois Gothic', sans-serif;
 }
 
+.welcome {
+  text-align: center;
+}
+
 body {
   margin: 0 auto;
   line-height: 1.4;
@@ -55,8 +59,7 @@ i {
 
 nav {
   padding: 10px;
-  background: lightgray;
-  border-top: 1px solid silver;
+  background: rgb(231, 231, 235);
   border-bottom: 1px solid silver;
 }
 
@@ -75,11 +78,11 @@ nav {
 nav a {
   padding: 10px;
   font-weight: bold;
-  color: black;
+  color: rgb(59, 108, 134);
 }
 
 a:hover {
-  color: rgb(139, 128, 195);
+  opacity: 0.5;
 }
 
 a {
