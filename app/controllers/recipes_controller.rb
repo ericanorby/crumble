@@ -3,7 +3,9 @@ class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:welcome]
 
   def welcome
-    
+    if current_user
+      redirect_to recipes_path
+    end
   end
 
   def index

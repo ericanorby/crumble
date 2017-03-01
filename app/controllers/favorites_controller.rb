@@ -1,4 +1,4 @@
-class MealboxsController < ApplicationController
+class FavoritesController < ApplicationController
 
   def index
     @favorites = current_user.favorites.all

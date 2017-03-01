@@ -1,7 +1,7 @@
 <div class="inline">
   <h1><%= @recipe.name %></h1>
   <% if current_user.favorites.exists?(recipe: @recipe) %>
-    <p style="float:right;"><%= link_to "Remove from your recipe box", remove_recipe_path(@recipe), method: :delete %></p>
+    <p style="float:right;"><i class="fa fa-times" aria-hidden="true"></i> <%= link_to "Remove from your recipe box", remove_recipe_path(@recipe), method: :delete %></p>
   <% else %>
     <p style="float:right;"><i class="fa fa-cutlery" aria-hidden="true"></i> <%= link_to "Add to your recipe box", add_recipe_path(@recipe), method: :post %></p>
   <% end %>

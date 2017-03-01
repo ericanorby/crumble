@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     resources :ingredients
   end
 
-  get '/recipe_box', to: 'mealboxs#index'
+  get '/recipe_box', to: 'favorites#index'
 
 end
