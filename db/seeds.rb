@@ -10,7 +10,7 @@ User.destroy_all
 Recipe.destroy_all
 Ingredient.destroy_all
 
-norbsie = User.create(username: "norbsie", email: "erica@email.com", password: "helloworld")
+norbsie = User.create(username: "enorby", email: "erica@blah.com", password: "helloworld")
 will = User.create(username: "imnotreal", email: "will@email.com", password: "helloworld")
 eva = User.create(username: "imaginaryperson", email: "eva@email.com", password: "helloworld")
 
