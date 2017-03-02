@@ -28,7 +28,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(recipe_params)
+    @recipe = Recipe.create(recipe_params)
     @recipe.author = current_user.username
     @recipe.save
     redirect_to recipe_path(@recipe)
