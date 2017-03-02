@@ -9,4 +9,3 @@ I started by creating an ERD and mapping out the model associations for User, Re
 ##Unsolved Problems
 
 - I need to figure out how to get the input field for directions to be a bullet or numbered list, so the directions are not clumped together into one large paragraph.
-- Can't load the new recipe form in deployed app --> ActionView::Template::Error (undefined method `web_source' for #<Recipe:0x007fc4e3fe9cf0>)
