@@ -65,6 +65,7 @@ i {
 
 nav {
   padding: 10px;
+  height: 23px;
   background: rgb(231, 231, 235);
   border-bottom: 1px solid silver;
 }
@@ -78,7 +79,7 @@ nav {
 }
 
 .placeholder {
-  height: 50px;
+  height: 45px;
 }
 
 .small {
