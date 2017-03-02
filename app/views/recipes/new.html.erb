@@ -9,10 +9,10 @@
         <%= f.label :web_source %><br>
         <span class="info">Is this recipe adapted from somewhere?<br>If so, please enter the source:</span>
         <br>
-        <%= f.text_field :web_source %>
+        <%= f.text_field :web_source, required: false %>
         <br>
         <%= f.label :photo_url %><br>
-        <%= f.text_field :photo_url %>
+        <%= f.text_field :photo_url, required: false %>
         <br>
         <div class="flex-no-wrap">
             <div>
