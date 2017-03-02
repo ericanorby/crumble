@@ -1,0 +1,343 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+* {
+  font-family: 'Carrois Gothic', sans-serif;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.cursive {
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+  margin-top: -20px;
+}
+
+body {
+  margin: 0 auto;
+  line-height: 1.4;
+  font-size: 18px;
+}
+
+header {
+  height: 80px;
+  background: rgb(90, 75, 170);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: white;
+}
+
+header a {
+    color: white;
+}
+
+header * {
+  padding: 10px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+header img {
+  height: 50px;
+  margin-bottom: 25px;
+  padding-right: 0px;
+}
+
+i {
+  color: gray;
+}
+
+nav {
+  padding: 10px;
+  height: 23px;
+  background: rgb(231, 231, 235);
+  border-bottom: 1px solid silver;
+}
+
+.notice {
+  color: green;
+}
+
+.alert {
+  color: red;
+}
+
+.placeholder {
+  height: 45px;
+}
+
+.small {
+  font-size: 14px;
+  margin-top: -12px;
+}
+
+nav a {
+  padding: 10px;
+  font-weight: bold;
+  color: rgb(59, 108, 134);
+}
+
+nav a:first-child {
+  color: rgb(128, 33, 73);
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(60, 33, 195);
+}
+
+main {
+  padding: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+textarea {
+  resize: none;
+  font-size: 18px;
+  padding: 8px;
+  width: 500px;
+  height: 100%;
+  border: 1px solid rgb(139, 128, 195);
+  margin: 5px 0;
+  background: rgb(251, 249, 217);
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+  width: 250px;
+  font-size: 18px;
+  padding: 8px;
+  border: 1px solid rgb(139, 128, 195);
+  margin: 5px 0 10px 0;
+  background: rgb(251, 249, 217);
+}
+
+input[type=number] {
+  width: 100px;
+  font-size: 18px;
+  padding: 8px;
+  border: 1px solid rgb(139, 128, 195);
+  margin: 5px 0px 10px 0;
+  background: rgb(251, 249, 217);
+}
+
+input[type=submit] {
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: lightgray;
+}
+
+sup {
+  color: darkred;
+}
+
+.difficulty label {
+  margin-right: 10px;
+}
+
+.difficulty {
+  margin: 5px 0;
+}
+
+.properties {
+  padding: 10px;
+  /*border: 1px solid rgb(249, 244, 160);*/
+  border: 1px;
+  border-radius: 5px;
+  margin: 5px;
+  background: rgb(251, 249, 217);
+  box-shadow: 2px 2px rgb(249, 244, 160);
+}
+
+.email {
+  font-size: 16px;
+  color: rgb(249, 244, 160);
+}
+
+.info {
+  font-size: 16px;
+  font-style: italic;
+  color: gray;
+}
+
+.ingredients h3 {
+  padding-left: 40px;
+}
+
+.add-ingredient {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+ul {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+li {
+  margin: 0 20px;
+}
+
+.preview {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+  border: 1px solid silver;
+}
+
+.show {
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid silver;
+  margin: 20px 0;
+}
+
+.inline * {
+  display: inline;
+}
+
+.recipe-img {
+  height: 400px;
+}
+
+.flex-end {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-no-wrap {
+  display: flex;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe {
+  text-align: center;
+  width: 200px;
+  margin: 20px;
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.add-recipe {
+  display: flex;
+}
+
+.add-recipe > div {
+  margin-right: 30px;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity:0.2;
+  }
+  25% {
+    opacity:0.3;
+  }
+  50% {
+    opacity:1;
+  }
+  75% {
+    opacity:0.3;
+  }
+  100% {
+    opacity:0.2;
+  }
+}
+
+#animate-food img {
+  width: 250px;
+  margin: 5px;
+  opacity: 0.2;
+}
+
+#animate-food img:nth-of-type(1) {
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+#animate-food img:nth-of-type(2) {
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+#animate-food img:nth-of-type(3) {
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+#animate-food img:nth-of-type(4) {
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
+}
+
+@media only screen and (max-width: 767px) {
+  header img {
+    height: 25px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  header {
+    height: 50px;
+  }
+  nav a {
+    font-size: 16px;
+  }
+  .email {
+    font-size: 14px;
+  }
+  #animate-food img {
+    width: 120px;
+  }
+}
