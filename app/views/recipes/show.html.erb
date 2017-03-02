@@ -11,8 +11,7 @@
     <% end %>
 </div>
 
-<p>Uploaded by
-    <%= link_to @recipe.author, "#", style: "color: blue;" %></p>
+<p>Uploaded by <span style="color:blue;"><%= @recipe.author %></span></p>
 
 <% if @recipe.web_source? %>
 <p class="small">Adapted from:
