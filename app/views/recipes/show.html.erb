@@ -14,9 +14,9 @@
 <p>Uploaded by
     <%= link_to @recipe.author, "#", style: "color: blue;" %></p>
 
-<% if @recipe.source_url? %>
+<% if @recipe.web_source? %>
 <p class="small">Adapted from:
-    <%= link_to @recipe.source_url, "#{@recipe.source_url}" %></p>
+    <%= link_to @recipe.web_source, "#{@recipe.web_source}" %></p>
 <% end %>
 
 <div class="flex">

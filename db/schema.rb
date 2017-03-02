@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20170301234329) do
   create_table "recipes", force: :cascade do |t|
     t.string  "author"
     t.string  "name"
-    t.string  "source_url"
+    t.string  "web_source"
     t.string  "photo_url"
     t.integer "servings"
     t.decimal "total_cost"
