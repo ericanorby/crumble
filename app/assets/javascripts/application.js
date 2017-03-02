@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
 
 $(window).scroll(function(){
   if ($(this).scrollTop() > 80) {
@@ -23,4 +24,6 @@ $(window).scroll(function(){
     $('nav').removeClass('fixed')
     $('#placeholder').removeClass('placeholder')
   }
+});
+
 });

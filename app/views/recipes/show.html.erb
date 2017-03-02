@@ -7,7 +7,7 @@
   <% end %>
 </div>
 
-<p>Uploaded by <%= @recipe.author %></p>
+<p>Uploaded by <%= link_to @recipe.author, "#", style: "color: blue;" %></p>
 
 <% if @recipe.source_url? %>
   <p class="small">Adapted from: <%= link_to @recipe.source_url, "#{@recipe.source_url}" %></p>

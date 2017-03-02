@@ -93,6 +93,10 @@ nav a {
   color: rgb(59, 108, 134);
 }
 
+nav a:first-child {
+  color: rgb(128, 33, 73);
+}
+
 a:hover {
   opacity: 0.5;
 }
