@@ -1,6 +1,4 @@
-class Recipe < ApplicationRecord
-  attr_accessible :web_source
-  
+class Recipe < ApplicationRecord  
   has_many :ingredients
   has_many :favorites
 end
