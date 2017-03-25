@@ -17,7 +17,7 @@
 $(document).ready(function(){
 
 $(window).scroll(function(){
-  if ($(this).scrollTop() > 80) {
+  if ($(this).scrollTop() > 60) {
     $('nav').addClass('fixed')
     $('#placeholder').addClass('placeholder')
   } else {

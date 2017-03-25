@@ -1,7 +1,5 @@
 class RecipesController < ApplicationController
 
-  before_action :authenticate_user!, except: [:welcome]
-
   def welcome
     if current_user
       redirect_to recipes_path
@@ -9,10 +7,16 @@ class RecipesController < ApplicationController
   end
 
   def index
+    if !current_user
+      flash.now[:alert] = "FYI - You cannot upload or save recipes until you sign up for an account!"
+    end
     @recipes = Recipe.all
   end
 
   def show
+    if !current_user
+      flash.now[:alert] = "FYI - You cannot upload or save recipes until you sign up for an account!"
+    end
     @recipe = Recipe.find(params[:id])
     @recipe.cost_per_serving = @recipe.total_cost / @recipe.servings
     @ingredients = @recipe.ingredients.all

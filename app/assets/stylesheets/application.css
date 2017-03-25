@@ -31,16 +31,15 @@
 body {
   margin: 0 auto;
   line-height: 1.4;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 header {
-  height: 80px;
+  height: 60px;
   background: rgb(90, 75, 170);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
   color: white;
 }
 
@@ -54,9 +53,23 @@ header * {
 }
 
 header img {
-  height: 50px;
-  margin-bottom: 25px;
+  height: 32px;
+  margin-bottom: 27px;
   padding-right: 0px;
+}
+
+header h1 {
+  margin-left: -10px;
+}
+
+main {
+  min-height: 70vh;
+}
+
+footer {
+  height: 50px;
+  background: rgb(231, 231, 235);
+  border-top: 1px solid silver;
 }
 
 i {
@@ -91,10 +104,6 @@ nav a {
   padding: 10px;
   font-weight: bold;
   color: rgb(59, 108, 134);
-}
-
-nav a:first-child {
-  color: rgb(128, 33, 73);
 }
 
 a:hover {

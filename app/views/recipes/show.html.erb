@@ -1,20 +1,22 @@
 <div class="inline">
     <h1><%= @recipe.name %></h1>
-    <% if current_user.favorites.exists?(recipe: @recipe) %>
-    <p style="float:right;">
-        <i class="fa fa-times" aria-hidden="true"></i>
-        <%= link_to "Remove from your recipe box", remove_recipe_path(@recipe), method: :delete %></p>
-<% else %>
-    <p style="float:right;">
-        <i class="fa fa-cutlery" aria-hidden="true"></i>
-        <%= link_to "Add to your recipe box", add_recipe_path(@recipe), method: :post %></p>
+    <% if current_user %>
+      <% if current_user.favorites.exists?(recipe: @recipe) %>
+      <p style="float:right;">
+          <i class="fa fa-times" aria-hidden="true"></i>
+          <%= link_to "Remove from your recipe box", remove_recipe_path(@recipe), method: :delete %></p>
+      <% else %>
+      <p style="float:right;">
+          <i class="fa fa-cutlery" aria-hidden="true"></i>
+          <%= link_to "Add to your recipe box", add_recipe_path(@recipe), method: :post %></p>
+      <% end %>
     <% end %>
 </div>
 
 <p>Uploaded by <span style="color:blue;"><%= @recipe.author %></span></p>
 
 <% if @recipe.web_source? %>
-<p class="small">Adapted from:
+<p class="small">Source:
     <%= link_to @recipe.web_source, "#{@recipe.web_source}" %></p>
 <% end %>
 
@@ -47,8 +49,10 @@
                 <%= ingredient.measurement %>
             </li>
             <% end %>
-            <% if current_user.username == @recipe.author %>
-            <%= link_to "+ Add Ingredient", new_recipe_ingredient_path(@recipe), class: "add-ingredient" %>
+            <% if current_user %>
+                <% if current_user.username == @recipe.author %>
+                <%= link_to "+ Add Ingredient", new_recipe_ingredient_path(@recipe), class: "add-ingredient" %>
+                <% end %>
             <% end %>
         </ul>
     </div>
@@ -58,10 +62,12 @@
 <h3>Directions</h3>
 <p><%= @recipe.directions %></p>
 
-<% if current_user.username == @recipe.author %>
-<p style="text-align:right;">
-    <%= link_to "Edit", edit_recipe_path(@recipe) %>
-    |
-    <%= link_to "Delete", recipe_path(@recipe), method: :delete %>
-</p>
+<% if current_user %>
+  <% if current_user.username == @recipe.author %>
+  <p style="text-align:right;">
+      <%= link_to "Edit", edit_recipe_path(@recipe) %>
+      |
+      <%= link_to "Delete", recipe_path(@recipe), method: :delete %>
+  </p>
+  <% end %>
 <% end %>
